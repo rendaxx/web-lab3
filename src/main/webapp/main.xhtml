@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Лабораторная работа №3</title>
+    <link rel="stylesheet" href="#{resource['css/style.css']}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="use-credentials"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet" />
+</h:head>
+<h:body>
+    <header>
+        Выполнил Бойко А.С. P3211, Вариант №21033
+    </header>
+    <div class="container">
+        <div class="left-container">
+            <div class="graph">
+                <svg id="xy-plane" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0" y1="150" x2="300" y2="150" stroke="black"/>
+                    <line x1="296" y1="148" x2="300" y2="150" stroke="black"/>
+                    <line x1="296" y1="152" x2="300" y2="150" stroke="black"/>
+                    <text x="292" y="160" class="small">x</text>
+
+                    <line x1="150" y1="0" x2="150" y2="300" stroke="black"/>
+                    <line x1="150" y1="0" x2="148" y2="4" stroke="black"/>
+                    <line x1="150" y1="0" x2="152" y2="4" stroke="black"/>
+                    <text x="140" y="8" class="small">y</text>
+
+
+                    <line x1="10" y1="148" x2="10" y2="152" stroke="black"/>
+                    <text x="5" y="146" class="small">-5</text>
+
+                    <line x1="24" y1="148" x2="24" y2="152" stroke="black"/>
+
+                    <line x1="38" y1="148" x2="38" y2="152" stroke="black"/>
+                    <text x="33" y="146" class="small">-4</text>
+
+                    <line x1="52" y1="148" x2="52" y2="152" stroke="black"/>
+
+                    <line x1="66" y1="148" x2="66" y2="152" stroke="black"/>
+                    <text x="61" y="146" class="small">-3</text>
+
+                    <line x1="80" y1="148" x2="80" y2="152" stroke="black"/>
+
+                    <line x1="94" y1="148" x2="94" y2="152" stroke="black"/>
+                    <text x="89" y="146" class="small">-2</text>
+
+                    <line x1="108" y1="148" x2="108" y2="152" stroke="black"/>
+
+                    <line x1="122" y1="148" x2="122" y2="152" stroke="black"/>
+                    <text x="117" y="146" class="small">-1</text>
+
+                    <line x1="136" y1="148" x2="136" y2="152" stroke="black"/>
+
+                    <line x1="164" y1="148" x2="164" y2="152" stroke="black"/>
+
+                    <line x1="178" y1="148" x2="178" y2="152" stroke="black"/>
+                    <text x="176" y="146" class="small">1</text>
+
+                    <line x1="192" y1="148" x2="192" y2="152" stroke="black"/>
+
+                    <line x1="206" y1="148" x2="206" y2="152" stroke="black"/>
+                    <text x="204" y="146" class="small">2</text>
+
+                    <line x1="220" y1="148" x2="220" y2="152" stroke="black"/>
+
+                    <line x1="234" y1="148" x2="234" y2="152" stroke="black"/>
+                    <text x="232" y="146" class="small">3</text>
+
+                    <line x1="248" y1="148" x2="248" y2="152" stroke="black"/>
+
+                    <line x1="262" y1="148" x2="262" y2="152" stroke="black"/>
+                    <text x="260" y="146" class="small">4</text>
+
+                    <line x1="276" y1="148" x2="276" y2="152" stroke="black"/>
+
+                    <line x1="290" y1="148" x2="290" y2="152" stroke="black"/>
+                    <text x="288" y="146" class="small">5</text>
+
+
+                    <line x1="148" y1="10" x2="152" y2="10" stroke="black"/>
+                    <text x="154" y="12" class="small">5</text>
+
+                    <line x1="148" y1="24" x2="152" y2="24" stroke="black"/>
+
+                    <line x1="148" y1="38" x2="152" y2="38" stroke="black"/>
+                    <text x="154" y="40" class="small">4</text>
+
+                    <line x1="148" y1="52" x2="152" y2="52" stroke="black"/>
+
+                    <line x1="148" y1="66" x2="152" y2="66" stroke="black"/>
+                    <text x="154" y="68" class="small">3</text>
+
+                    <line x1="148" y1="80" x2="152" y2="80" stroke="black"/>
+
+                    <line x1="148" y1="94" x2="152" y2="94" stroke="black"/>
+                    <text x="154" y="96" class="small">2</text>
+
+                    <line x1="148" y1="108" x2="152" y2="108" stroke="black"/>
+
+                    <line x1="148" y1="122" x2="152" y2="122" stroke="black"/>
+                    <text x="154" y="124" class="small">1</text>
+
+                    <line x1="148" y1="136" x2="152" y2="136" stroke="black"/>
+
+                    <line x1="148" y1="164" x2="152" y2="164" stroke="black"/>
+
+                    <line x1="148" y1="178" x2="152" y2="178" stroke="black"/>
+                    <text x="154" y="180" class="small">-1</text>
+
+                    <line x1="148" y1="192" x2="152" y2="192" stroke="black"/>
+                    <text x="154" y="208" class="small">-2</text>
+
+                    <line x1="148" y1="206" x2="152" y2="206" stroke="black"/>
+
+                    <line x1="148" y1="220" x2="152" y2="220" stroke="black"/>
+
+                    <line x1="148" y1="234" x2="152" y2="234" stroke="black"/>
+                    <text x="154" y="236" class="small">-3</text>
+
+                    <line x1="148" y1="248" x2="152" y2="248" stroke="black"/>
+
+                    <line x1="148" y1="262" x2="152" y2="262" stroke="black"/>
+                    <text x="154" y="264" class="small">-4</text>
+
+                    <line x1="148" y1="276" x2="152" y2="276" stroke="black"/>
+
+                    <line x1="148" y1="290" x2="152" y2="290" stroke="black"/>
+                    <text x="154" y="292" class="small">-5</text>
+                </svg>
+            </div>
+            <div class="form">
+                <h:form>
+                    <div class="form-element">
+                        <h:outputLabel value="Выберите X координаты:" />
+
+                        <h:panelGrid columns="6" styleClass="checkbox-grid">
+                            <h:selectBooleanCheckbox id="x1" value="#{formBean.selectedX['-2']}" />
+                            <h:outputLabel for="x1" value="-2" />
+
+                            <h:selectBooleanCheckbox id="x2" value="#{formBean.selectedX['-1.5']}" />
+                            <h:outputLabel for="x2" value="-1.5" />
+
+                            <h:selectBooleanCheckbox id="x3" value="#{formBean.selectedX['-1']}" />
+                            <h:outputLabel for="x3" value="-1" />
+
+                            <h:selectBooleanCheckbox id="x4" value="#{formBean.selectedX['-0.5']}" />
+                            <h:outputLabel for="x4" value="-0.5" />
+
+                            <h:selectBooleanCheckbox id="x5" value="#{formBean.selectedX['0']}" />
+                            <h:outputLabel for="x5" value="0" />
+
+                            <h:selectBooleanCheckbox id="x6" value="#{formBean.selectedX['0.5']}" />
+                            <h:outputLabel for="x6" value="0.5" />
+
+                            <h:selectBooleanCheckbox id="x7" value="#{formBean.selectedX['1']}" />
+                            <h:outputLabel for="x7" value="1" />
+
+                            <h:selectBooleanCheckbox id="x8" value="#{formBean.selectedX['1.5']}" />
+                            <h:outputLabel for="x8" value="1.5" />
+
+                            <h:selectBooleanCheckbox id="x9" value="#{formBean.selectedX['2']}" />
+                            <h:outputLabel for="x9" value="2" />
+                        </h:panelGrid>
+                    </div>
+
+                    <div class="form-element">
+                        <h:outputLabel for="y" value="Введите Y координату:" />
+                        <h:inputText id="y" value="#{formBean.y}" placeholder="-5 &lt;= y &lt;= 5" />
+                    </div>
+
+                    <div class="form-element">
+                        <h:outputLabel for="radius-select" value="Выберите значение R:" />
+                        <p:spinner id="radius-select" value="#{formBean.r}" min="1" max="3" step="0.5" onchange="drawArea(this)"/>
+                    </div>
+
+                    <p:commandButton value="Отправить" action="#{formBean.submit}" update="resultsTable"/>
+                </h:form>
+            </div>
+        </div>
+
+        <div class="table">
+            <h:dataTable id="resultsTable" value="#{hitResultBean.results}" var="hit" styleClass="data-table">
+                <h:column>
+                    <f:facet name="header">X координата</f:facet>
+                    #{hit.x()}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Y координата</f:facet>
+                    #{hit.y()}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Радиус</f:facet>
+                    #{hit.r()}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Было ли попадание</f:facet>
+                    #{hit.isAreaHit() ? 'Да' : 'Нет'}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Время запроса</f:facet>
+                    #{hit.processingStartTime()}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Время выполнения</f:facet>
+                    #{hit.executionTimeInMillis()}
+                </h:column>
+            </h:dataTable>
+            <div id="table-footer-helper">
+                здесь будут ответы от сервера
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="#{resource['js/main.js']}"></script>
+</h:body>
+</html>

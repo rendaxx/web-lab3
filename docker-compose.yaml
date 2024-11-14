@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: lab3_db
+    environment:
+      POSTGRES_DB: lab3
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
